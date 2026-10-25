@@ -1,0 +1,85 @@
+{
+  "services": [
+    {
+      "id": "catalog",
+      "name": "Catalog",
+      "description": "Product catalog and inventory browsing."
+    },
+    {
+      "id": "checkout",
+      "name": "Checkout",
+      "description": "Customer checkout and order creation."
+    },
+    {
+      "id": "database",
+      "name": "Primary Database",
+      "description": "Primary transactional database."
+    },
+    {
+      "id": "payments",
+      "name": "Payments API",
+      "description": "Payment authorization and settlement API."
+    },
+    {
+      "id": "search",
+      "name": "Search",
+      "description": "Product search and discovery."
+    },
+    {
+      "id": "worker",
+      "name": "Background Workers",
+      "description": "Asynchronous job processing."
+    }
+  ],
+  "alerts": [
+    {
+      "id": "alert-api-latency",
+      "serviceId": "payments",
+      "title": "Payment API p95 latency above 2 seconds",
+      "severity": "critical",
+      "status": "firing",
+      "createdAt": "2026-10-01T08:00:00.000Z"
+    },
+    {
+      "id": "alert-checkout-errors",
+      "serviceId": "checkout",
+      "title": "Checkout error rate above 5 percent",
+      "severity": "high",
+      "status": "firing",
+      "createdAt": "2026-10-01T08:05:00.000Z"
+    },
+    {
+      "id": "alert-database-cpu",
+      "serviceId": "database",
+      "title": "Primary database CPU saturation",
+      "severity": "critical",
+      "status": "resolved",
+      "createdAt": "2026-10-01T07:00:00.000Z"
+    },
+    {
+      "id": "alert-payment-timeout",
+      "serviceId": "payments",
+      "title": "Upstream payment provider timeouts",
+      "severity": "high",
+      "status": "resolved",
+      "createdAt": "2026-10-01T07:15:00.000Z"
+    },
+    {
+      "id": "alert-search-availability",
+      "serviceId": "search",
+      "title": "Search availability below service objective",
+      "severity": "medium",
+      "status": "firing",
+      "createdAt": "2026-10-01T08:10:00.000Z"
+    },
+    {
+      "id": "alert-worker-queue",
+      "serviceId": "worker",
+      "title": "Background job queue depth elevated",
+      "severity": "medium",
+      "status": "resolved",
+      "createdAt": "2026-10-01T06:45:00.000Z"
+    }
+  ],
+  "incidents": []
+}

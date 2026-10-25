@@ -1,0 +1,48 @@
+{
+  "chat.tools.terminal.autoApprove": {
+    "/^npm run(?:\\s+[\\w:-]+)?$/i": {
+      "approve": true,
+      "matchCommandLine": true
+    },
+    "/^npm test$/i": {
+      "approve": true,
+      "matchCommandLine": true
+    },
+    "/^npx tsc(?:\\s+.*)?$/i": {
+      "approve": true,
+      "matchCommandLine": true
+    },
+    "/^node(?:\\s+.*)?$/i": {
+      "approve": true,
+      "matchCommandLine": true
+    },
+    "/^git\\s+(?:status|diff|add|commit)(?:\\s+.*)?$/i": {
+      "approve": true,
+      "matchCommandLine": true
+    },
+    "/\\bsudo(?:\\s|$)/i": {
+      "approve": false,
+      "matchCommandLine": true
+    },
+    "/\\brm\\b.*(?:-r|--recursive).*(?:-f|--force)|\\brm\\s+-[^\\s]*f[^\\s]*\\s+.*(?:-r|--recursive)|\\bRemove-Item\\b.*(?:-Recurse|-r).*?(?:-Force|-f)/i": {
+      "approve": false,
+      "matchCommandLine": true
+    },
+    "/\\bgit\\s+push\\b.*(?:--force(?:-with-lease)?|-f(?:\\s|$))/i": {
+      "approve": false,
+      "matchCommandLine": true
+    },
+    "/^git\\s+push(?:\\s|$)/i": {
+      "approve": false,
+      "matchCommandLine": true
+    },
+    "/\\b(?:Get-Content|gc|cat|type|more|Select-String|findstr|python(?:\\d+(?:\\.\\d+)*)?|py)\\b.*\\.env(?:[.\\s\"'\\\\/]|$)/i": {
+      "approve": false,
+      "matchCommandLine": true
+    },
+    "/\\b(?:readFile|readFileSync|readTextFile|loadEnvFile|ReadAllText|ReadAllLines)\\b.*\\.env/i": {
+      "approve": false,
+      "matchCommandLine": true
+    }
+  }
+}

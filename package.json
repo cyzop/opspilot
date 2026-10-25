@@ -1,0 +1,36 @@
+{
+  "name": "ops-pilot",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node --env-file-if-exists=.env --import tsx src/index.ts",
+    "arena": "node --env-file-if-exists=.env --import tsx src/arena.ts",
+    "bench": "node --env-file-if-exists=.env --import tsx src/bench.ts",
+    "mcp": "node --env-file-if-exists=.env --import tsx src/mcp/server.ts",
+    "test": "node --env-file-if-exists=.env --import tsx --test \"tests/**/*.test.ts\"",
+    "typecheck": "tsc --noEmit",
+    "seed": "node --env-file-if-exists=.env --import tsx scripts/seed.ts",
+    "conversa-longa": "bash scripts/conversa-longa.sh"
+  },
+  "engines": {
+    "node": ">=22.9.0"
+  },
+  "dependencies": {
+    "@huggingface/transformers": "^4.3.1",
+    "@langchain/core": "^1.2.14",
+    "@langchain/langgraph": "^1.4.18",
+    "@langchain/openai": "^1.6.2",
+    "@modelcontextprotocol/sdk": "^1.32.1",
+    "express": "^5.2.1",
+    "mysql2": "^3.24.5",
+    "sequelize": "^6.37.8",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^26.6.4",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  }
+}

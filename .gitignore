@@ -1,0 +1,12 @@
+node_modules
+# Segredos: nunca versionar .env (chaves reais). Só o .env.example, sem valores, entra no Git.
+.env
+.env.*
+!.env.example
+dist
+build
+*.log
+data/
+!data/
+data/*
+!data/ops-store.json
